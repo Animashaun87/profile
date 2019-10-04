@@ -1,0 +1,47 @@
+@media screen and (max-width: 567px) {
+  .hide-small-phone {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+  }
+}
+@media screen and (min-width: 567px) {
+  .show-small-mobile {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 767px) {
+  .show-mobile {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1165px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1165px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1165px) {
+  .show-large-font {
+    font-size: 32px !important;
+    font-weight: 500px !important;
+  }
+}
+
+.grow {
+  transition: all 0.5s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.05);
+}
