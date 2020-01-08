@@ -54,13 +54,13 @@ function Header() {
                   <Col>
                     <div>
                       {" "}
-                      <Link to="/" >
-                      <img
-                        src={logo}
-                        alt="bidemi"
-                        height="50px"
-                        width="120px"
-                      />
+                      <Link to="/">
+                        <img
+                          src={logo}
+                          alt="bidemi"
+                          height="50px"
+                          width="120px"
+                        />
                       </Link>
                     </div>
                   </Col>

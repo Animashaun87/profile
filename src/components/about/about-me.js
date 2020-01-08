@@ -13,14 +13,12 @@ function AboutMe(props) {
       <Row style={{ padding: 50 }}>
         <Col>
           <h3 style={styles.aboutText}>About Ab</h3>
-          <div>
+          <div style={styles.title}>
             Producing high-quality application and exceptional user experience
           </div>
           <div style={styles.aboutSubText}>
-            web designer from Nigeria, Abuja. i have rich experience in web site
-            design and building, also i am good at wordpress. i love to talk
-            with you about our unique, modern and mobile-ready website that will
-            help you reach all of your marketing.{" "}
+            I'm a software developer with a rich background of developing
+            sophisticated modern applications.
           </div>
         </Col>
         <Col>
@@ -124,10 +122,10 @@ function AboutMe(props) {
           </div>
           <ul>
             <li>React</li>
-            <li>React</li>
-            <li>React</li>
-            <li>React</li>
-            <li>React</li>
+            <li>Javascript</li>
+            <li>PHP</li>
+            <li>Laravel</li>
+            <li>Node</li>
           </ul>
         </Col>
       </Row>
@@ -146,6 +144,10 @@ const styles = {
   aboutSubText: {
     fontSize: 20,
     color: colors.black
+  },
+  title: {
+    fontSize: 15,
+    color: colors.darker
   }
 };
 export default AboutMe;

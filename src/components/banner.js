@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Button, Icon, Carousel } from "antd";
+import { Row, Col, Button, Icon } from "antd";
 import Bidemi from "../utils/images/Bidemi.jpg";
 import colors from "../utils/colors";
 import "../utils/styles/button.css";
@@ -105,10 +105,8 @@ function Banner() {
               <Col lg={24}>
                 <div style={styles.profileSubText}>
                   {" "}
-                  I'm a web developer both Front-end and Back-end i have rich
-                  experience in web site design and building, also i am good at
-                  wordpress. i love to talk with you about our unique, modern
-                  and mobile-ready website that will help you reach all of your
+                  I'm a software developer with a rich background of developing
+                  sophisticated modern applications.
                   <div
                     style={{
                       borderBottom: "double medium #1B242F",

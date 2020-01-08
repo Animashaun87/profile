@@ -49,7 +49,9 @@ const Quote = () => {
             >
               Abidemi Animashaun
             </h3>
-            <div style={styles.text}>Everyone can't think</div>
+            <div style={styles.text}>
+              Every success story has a painful sacrifice
+            </div>
           </div>
         </Carousel>
       </div>

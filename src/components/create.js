@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Typography } from "antd";
-import colors from "./../utils/colors";
+// import colors from "./../utils/colors";
 import Pro from "./../utils/images/programmer.jpg";
 
 const { Text, Title } = Typography;

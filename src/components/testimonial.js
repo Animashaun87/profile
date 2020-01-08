@@ -1,9 +1,9 @@
 import React from "react";
-import { Row, Col, Layout, Typography } from "antd";
+import { Row, Col, Typography } from "antd";
 import colors from "../utils/colors";
 import Pro from "./../utils/images/programmer.jpg";
 
-const { Text, Title } = Typography;
+const { Title } = Typography;
 function Testimonial() {
   return (
     <>
