@@ -6,7 +6,7 @@ import Container from "./container";
 import { Link } from "@reach/router";
 
 function Header() {
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   // const [SubMenu, setMenu] = useState(false);
   return (
     <>
@@ -55,12 +55,12 @@ function Header() {
                     <div>
                       {" "}
                       <Link to="/">
-                        <img
+                        {/* <img
                           src={logo}
                           alt="bidemi"
                           height="50px"
                           width="120px"
-                        />
+                        /> */}
                       </Link>
                     </div>
                   </Col>
@@ -70,7 +70,7 @@ function Header() {
                         type="mobile"
                         style={{ fontSize: 20, marginRight: 8 }}
                       />
-                      +2348 1655 19459
+                      +23481 6551 9459
                     </div>
                   </Col>
                 </Row>
@@ -112,7 +112,7 @@ function Header() {
                 Home
               </div>
             </Link>
-            <Link to="/">
+            <Link to="/about">
               <div style={styles.mobileMenu}>
                 <Icon type="profile" style={styles.mobileMenuIcon} />
                 About

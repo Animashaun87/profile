@@ -7,7 +7,7 @@ const { Text, Title } = Typography;
 function Create() {
   return (
     <>
-      <div style={styles.bg}>
+      <div>
         <Row type="flex" justify="center">
           <Col
             lg={{ span: 18 }}

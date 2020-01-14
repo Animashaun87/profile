@@ -7,7 +7,7 @@ import react from "../../utils/images/react.png";
 import Laravel from "../../utils/images/laravel.jpg";
 import Project from "../projects";
 
-function AboutMe(props) {
+function AboutMe() {
   return (
     <>
       <Row style={{ padding: 50 }}>
@@ -114,13 +114,13 @@ function AboutMe(props) {
         </Row>
       </Row>
       <Row>
-        <Col>
-          <h3>Skills</h3>
-          <div>
+        <Col style={{ paddingLeft: 50 }}>
+          <h3 style={{ fontSize: 28, fontWeight: "bold" }}>Skills</h3>
+          <div style={{ fontSize: 21 }}>
             I'm a skilled developer with rich experience in front-end and
             back-end. creating responsive web app of a high quality
           </div>
-          <ul>
+          <ul style={{ fontSize: 18 }}>
             <li>React</li>
             <li>Javascript</li>
             <li>PHP</li>

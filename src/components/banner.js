@@ -58,7 +58,7 @@ function Banner() {
                     <Icon type="github" />
                   </a>
                   <a
-                    href="https://medium.com/animashaun87"
+                    href="https://medium.com/@animashaunbidemi07"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
@@ -107,12 +107,12 @@ function Banner() {
                   {" "}
                   I'm a software developer with a rich background of developing
                   sophisticated modern applications.
-                  <div
+                  {/* <div
                     style={{
                       borderBottom: "double medium #1B242F",
                       width: "80%"
                     }}
-                  ></div>
+                  ></div> */}
                 </div>
               </Col>
             </Row>
