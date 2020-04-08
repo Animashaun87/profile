@@ -16,7 +16,7 @@ function Banner() {
             paddingLeft: 11,
             paddingRight: 11,
             paddingTop: 20,
-            paddingBottom: 20
+            paddingBottom: 20,
           }}
         >
           <Col lg={8} md={24} sm={24} xs={24}>
@@ -34,7 +34,7 @@ function Banner() {
                     backgroundColor: colors.dark,
                     borderRadius: "50%",
                     height: 240,
-                    width: 240
+                    width: 240,
                   }}
                 >
                   <img
@@ -48,7 +48,7 @@ function Banner() {
                   style={{
                     display: "flex",
                     justifyContent: "center",
-                    marginTop: 25
+                    marginTop: 25,
                   }}
                 >
                   <Anchor />
@@ -77,7 +77,7 @@ function Banner() {
                 <div style={styles.profileSubText}>
                   {" "}
                   I'm a software developer with a rich background in developing
-                  modern applications that will .
+                  modern applications.
                   {/* <div
                     style={{
                       borderBottom: "double medium #1B242F",
@@ -112,27 +112,27 @@ const styles = {
     fontSize: 30,
     fontWeight: 300,
     lineHeight: "1.5em",
-    textAlign: "center"
+    textAlign: "center",
   },
   profileImage: {
     height: 230,
     width: 230,
-    borderRadius: "50%"
+    borderRadius: "50%",
   },
   textName: {
-    color: colors.pink
+    color: colors.pink,
   },
   profileText: {
     color: colors.lightDark,
     fontSize: 26,
     fontWeight: 500,
-    paddingBottom: 25
+    paddingBottom: 25,
   },
   profileSubText: {
     color: colors.darker,
     fontSize: 20,
-    paddingBottom: 24
-  }
+    paddingBottom: 24,
+  },
 };
 
 export default Banner;

@@ -18,8 +18,8 @@ function AboutMe() {
             Producing high-quality application and exceptional user experience
           </div>
           <div style={styles.aboutSubText}>
-            I'm a software developer with a rich background of developing
-            sophisticated modern applications.
+            I'm a software developer with a rich background in developing modern
+            applications.
           </div>
         </Col>
         <Col>
@@ -39,7 +39,7 @@ function AboutMe() {
               style={{
                 backgroundColor: colors.black,
                 width: "95%",
-                height: "300px"
+                height: "300px",
               }}
             >
               <img src={Php} alt="" height="300px" width="95%" />
@@ -56,7 +56,7 @@ function AboutMe() {
               style={{
                 backgroundColor: colors.black,
                 width: "95%",
-                height: "300px"
+                height: "300px",
               }}
             >
               <img src={Node} alt="" height="300px" width="95%" />
@@ -73,7 +73,7 @@ function AboutMe() {
               style={{
                 backgroundColor: colors.black,
                 width: "95%",
-                height: "300px"
+                height: "300px",
               }}
             >
               <img src={react} alt="" height="300px" width="95%" />
@@ -116,15 +116,15 @@ const styles = {
   aboutText: {
     fontSize: 30,
     color: colors.darker,
-    textTransform: "capitalize"
+    textTransform: "capitalize",
   },
   aboutSubText: {
     fontSize: 20,
-    color: colors.black
+    color: colors.black,
   },
   title: {
     fontSize: 15,
-    color: colors.darker
-  }
+    color: colors.darker,
+  },
 };
 export default AboutMe;
