@@ -2,6 +2,8 @@ import React from "react";
 import { Row, Col, Icon } from "antd";
 import colors from "../../utils/colors";
 import Project from "../projects";
+// import { Link } from "@reach/router";
+import Anchor from "../anchor";
 
 function ContactMe() {
   return (
@@ -24,30 +26,7 @@ function ContactMe() {
               send me a mail on animashaunbidemi07@gmail.com
             </div>
             <div style={{ marginTop: 30 }}>
-              <Icon
-                type="github"
-                style={{
-                  fontSize: 25,
-
-                  color: colors.dark
-                }}
-              />
-              <Icon
-                type="medium"
-                style={{
-                  fontSize: 25,
-                  paddingLeft: 20,
-                  color: colors.dark
-                }}
-              />
-              <Icon
-                type="twitter"
-                style={{
-                  fontSize: 25,
-                  paddingLeft: 20,
-                  color: colors.dark
-                }}
-              />
+              <Anchor />
             </div>
           </div>
         </Col>
@@ -55,7 +34,7 @@ function ContactMe() {
           <Col lg={8} md={24} sm={24} xs={24}>
             <div style={styles.infoText}>
               <Icon type="mobile" />
-              +2348 16551 9459
+              +234 816 551 9459
             </div>
           </Col>
           <Col lg={8} md={24} sm={24} xs={24}>
@@ -68,7 +47,7 @@ function ContactMe() {
           <Col lg={8} md={24} sm={24} xs={24}>
             <div style={styles.infoText}>
               <Icon type="mobile" />
-              +2348 16551 9459
+              +234 802 892 7781
             </div>
           </Col>
         </Row>

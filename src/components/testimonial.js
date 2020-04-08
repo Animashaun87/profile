@@ -22,7 +22,8 @@ function Testimonial() {
                   display: "flex",
                   justifyContent: "center",
                   color: colors.darker,
-                  textTransform: "uppercase"
+                  textTransform: "uppercase",
+                  paddingTop: 15
                 }}
               >
                 testimonial
@@ -47,7 +48,15 @@ function Testimonial() {
                     }}
                   >
                     {" "}
-                    Thanks a million bunch Brytahub!
+                    Thanks a million bunch{" "}
+                    <a
+                      href="http://www.brytahub.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ paddingLeft: 7, color: colors.pink }}
+                    >
+                      Brytahub!
+                    </a>
                   </span>
                 </Title>
               </div>

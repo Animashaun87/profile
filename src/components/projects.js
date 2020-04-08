@@ -25,14 +25,15 @@ const Project = () => {
             xs={{ span: 24 }}
             style={{ marginBottom: 20 }}
           >
-            <Card
-              className="grow"
-              hoverable
-              style={{}}
-              cover={<img src={Coder} alt="" width="90%" height="270px" />}
-            >
-              <Meta title="project" description="projects" />
-            </Card>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <Card
+                className="grow"
+                hoverable
+                cover={<img src={Coder} alt="" width="90%" height="270px" />}
+              >
+                <Meta title="project" description="projects" />
+              </Card>
+            </a>
           </Col>
           <Col
             lg={{ span: 8 }}
@@ -41,14 +42,15 @@ const Project = () => {
             xs={{ span: 24 }}
             style={{ marginBottom: 20 }}
           >
-            <Card
-              className="grow"
-              hoverable
-              style={{}}
-              cover={<img src={Coder} alt="" width="90%" height="270px" />}
-            >
-              <Meta title="project" description="projects" />
-            </Card>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <Card
+                className="grow"
+                hoverable
+                cover={<img src={Coder} alt="" width="90%" height="270px" />}
+              >
+                <Meta title="project" description="projects" />
+              </Card>
+            </a>
           </Col>
           <Col
             lg={{ span: 8 }}
@@ -57,14 +59,15 @@ const Project = () => {
             xs={{ span: 24 }}
             style={{ marginBottom: 20 }}
           >
-            <Card
-              className="grow"
-              hoverable
-              style={{}}
-              cover={<img src={Coder} alt="" width="90%" height="270px" />}
-            >
-              <Meta title="project" description="projects" />
-            </Card>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <Card
+                className="grow"
+                hoverable
+                cover={<img src={Coder} alt="" width="90%" height="270px" />}
+              >
+                <Meta title="project" description="projects" />
+              </Card>
+            </a>
           </Col>
         </Row>
 
@@ -76,14 +79,15 @@ const Project = () => {
             xs={{ span: 24 }}
             style={{ marginBottom: 20 }}
           >
-            <Card
-              className="grow"
-              hoverable
-              style={{}}
-              cover={<img src={Coder} alt="" width="90%" height="270px" />}
-            >
-              <Meta title="project" description="projects" />
-            </Card>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <Card
+                className="grow"
+                hoverable
+                cover={<img src={Coder} alt="" width="90%" height="270px" />}
+              >
+                <Meta title="project" description="projects" />
+              </Card>
+            </a>
           </Col>
           <Col
             lg={{ span: 8 }}
@@ -92,14 +96,15 @@ const Project = () => {
             xs={{ span: 24 }}
             style={{ marginBottom: 20 }}
           >
-            <Card
-              className="grow"
-              hoverable
-              style={{}}
-              cover={<img src={Coder} alt="" width="90%" height="270px" />}
-            >
-              <Meta title="project" description="projects" />
-            </Card>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <Card
+                className="grow"
+                hoverable
+                cover={<img src={Coder} alt="" width="90%" height="270px" />}
+              >
+                <Meta title="project" description="projects" />
+              </Card>
+            </a>
           </Col>
           <Col
             lg={{ span: 8 }}
@@ -108,14 +113,15 @@ const Project = () => {
             xs={{ span: 24 }}
             style={{ marginBottom: 20 }}
           >
-            <Card
-              className="grow"
-              hoverable
-              style={{}}
-              cover={<img src={Coder} alt="" width="90%" height="270px" />}
-            >
-              <Meta title="project" description="projects" />
-            </Card>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <Card
+                className="grow"
+                hoverable
+                cover={<img src={Coder} alt="" width="90%" height="270px" />}
+              >
+                <Meta title="project" description="projects" />
+              </Card>
+            </a>
           </Col>
         </Row>
       </Container>

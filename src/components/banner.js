@@ -4,6 +4,8 @@ import Bidemi from "../utils/images/Bidemi.jpg";
 import colors from "../utils/colors";
 import "../utils/styles/button.css";
 import { Link } from "@reach/router";
+import Anchor from "./anchor";
+import Loader from "../utils/loader";
 
 function Banner() {
   return (
@@ -36,7 +38,7 @@ function Banner() {
                   }}
                 >
                   <img
-                    src={Bidemi}
+                    src={Bidemi ? Bidemi : <Loader />}
                     alt="bidex"
                     id="image"
                     style={styles.profileImage}
@@ -49,38 +51,7 @@ function Banner() {
                     marginTop: 25
                   }}
                 >
-                  <a
-                    href="https://github.com/animashaun87"
-                    style={{ fontSize: 25, color: colors.dark }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon type="github" />
-                  </a>
-                  <a
-                    href="https://medium.com/@animashaunbidemi07"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      fontSize: 25,
-                      paddingLeft: 20,
-                      color: colors.dark
-                    }}
-                  >
-                    <Icon type="medium" />
-                  </a>
-                  <a
-                    href="https://twitter.com/aniamshaun87"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      fontSize: 25,
-                      paddingLeft: 20,
-                      color: colors.dark
-                    }}
-                  >
-                    <Icon type="twitter" />
-                  </a>
+                  <Anchor />
                 </div>
               </Col>
             </Row>
@@ -105,8 +76,8 @@ function Banner() {
               <Col lg={24}>
                 <div style={styles.profileSubText}>
                   {" "}
-                  I'm a software developer with a rich background of developing
-                  sophisticated modern applications.
+                  I'm a software developer with a rich background in developing
+                  modern applications that will .
                   {/* <div
                     style={{
                       borderBottom: "double medium #1B242F",

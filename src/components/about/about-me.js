@@ -1,11 +1,12 @@
 import React from "react";
-import { Row, Col, Icon } from "antd";
+import { Row, Col } from "antd";
 import colors from "../../utils/colors";
 import Php from "../../utils/images/php7.png";
 import Node from "../../utils/images/nodejs.png";
 import react from "../../utils/images/react.png";
 import Laravel from "../../utils/images/laravel.jpg";
 import Project from "../projects";
+import Anchor from "../anchor";
 
 function AboutMe() {
   return (
@@ -23,30 +24,7 @@ function AboutMe() {
         </Col>
         <Col>
           <div style={{ marginTop: 20 }}>
-            <Icon
-              type="github"
-              style={{
-                fontSize: 25,
-
-                color: colors.dark
-              }}
-            />
-            <Icon
-              type="medium"
-              style={{
-                fontSize: 25,
-                paddingLeft: 20,
-                color: colors.dark
-              }}
-            />
-            <Icon
-              type="twitter"
-              style={{
-                fontSize: 25,
-                paddingLeft: 20,
-                color: colors.dark
-              }}
-            />
+            <Anchor />
           </div>
         </Col>
         <Row type="flex" style={{ paddingTop: 50 }}>
@@ -129,7 +107,6 @@ function AboutMe() {
           </ul>
         </Col>
       </Row>
-
       <Project />
     </>
   );

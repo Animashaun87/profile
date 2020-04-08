@@ -11,9 +11,9 @@ function Home() {
   return (
     <>
       <Banner />
-      {/* <Create /> */}
+      <Create />
       <Project />
-      {/* <Testimonial /> */}
+      <Testimonial />
     </>
   );
 }

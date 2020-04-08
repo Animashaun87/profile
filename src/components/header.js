@@ -8,6 +8,27 @@ import { Link } from "@reach/router";
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   // const [SubMenu, setMenu] = useState(false);
+
+  const date = new Date();
+  const hours = date.getHours();
+  let timeOfDay;
+
+  const changeStyle = {
+    fontSize: 22,
+    marginLeft: 20
+  };
+
+  if (hours < 12) {
+    timeOfDay = "Good Morning";
+    changeStyle.color = colors.white;
+  } else if (hours >= 12 && hours < 17) {
+    timeOfDay = "Good Day";
+    changeStyle.color = colors.pink;
+  } else {
+    timeOfDay = "Good Night";
+    changeStyle.color = colors.white;
+  }
+
   return (
     <>
       <Affix>
@@ -70,7 +91,8 @@ function Header() {
                         type="mobile"
                         style={{ fontSize: 20, marginRight: 8 }}
                       />
-                      +23481 6551 9459
+                      +234 816 551 9459
+                      <span style={changeStyle}>{timeOfDay}</span>
                     </div>
                   </Col>
                 </Row>
