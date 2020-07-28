@@ -25,7 +25,7 @@ const Project = () => {
             xs={{ span: 24 }}
             style={{ marginBottom: 20 }}
           >
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <Card
                 className="grow"
                 hoverable
@@ -42,7 +42,7 @@ const Project = () => {
             xs={{ span: 24 }}
             style={{ marginBottom: 20 }}
           >
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <Card
                 className="grow"
                 hoverable
@@ -59,7 +59,7 @@ const Project = () => {
             xs={{ span: 24 }}
             style={{ marginBottom: 20 }}
           >
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <Card
                 className="grow"
                 hoverable
@@ -79,7 +79,7 @@ const Project = () => {
             xs={{ span: 24 }}
             style={{ marginBottom: 20 }}
           >
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <Card
                 className="grow"
                 hoverable
@@ -96,7 +96,7 @@ const Project = () => {
             xs={{ span: 24 }}
             style={{ marginBottom: 20 }}
           >
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <Card
                 className="grow"
                 hoverable
@@ -113,7 +113,7 @@ const Project = () => {
             xs={{ span: 24 }}
             style={{ marginBottom: 20 }}
           >
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <Card
                 className="grow"
                 hoverable

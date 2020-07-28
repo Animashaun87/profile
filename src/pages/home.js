@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import Banner from "../components/banner";
 import Testimonial from "../components/testimonial";
 import Project from "../components/projects";
-import Create from "../components/create";
+import AboutMe from '../components/about/about-me'
+import Experience from "../components/experience";
 
 function Home() {
   useEffect(() => {
@@ -10,10 +11,11 @@ function Home() {
   });
   return (
     <>
-      <Banner />
-      <Create />
-      <Project />
-      <Testimonial />
+      {/* <Banner/> */}
+      {/* <Project /> */}
+      <AboutMe />
+      <Experience />
+      {/* <Testimonial /> */}
     </>
   );
 }

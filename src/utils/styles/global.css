@@ -1,4 +1,63 @@
-@media screen and (max-width: 567px) {
+body {
+  scroll-behavior: smooth;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .wantsToKnow .wantsToKnowCaption h2 {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .wantsToKnow .wantsToKnowCaption h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .wantsToKnow .wantsToKnow h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .wantsToKnow .wantsToKnow-btn {
+    float: left;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .wantToWork-area .wantToWork-btn {
+    float: left;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .wantsToKnow .wantToWork-btn {
+    float: left;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .sm-left {
+    float: left;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .sm-left {
+    float: left;
+    margin-top: 30px;
+  }
+}
+
+/* @media screen and (max-width: 567px) {
   .hide-small-phone {
     display: flex;
     align-items: center;
@@ -44,4 +103,4 @@
 }
 .grow:hover {
   transform: scale(1.05);
-}
+} */

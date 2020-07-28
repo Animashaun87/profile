@@ -4,7 +4,7 @@ import colors from "../../utils/colors";
 
 const Quote = () => {
   return (
-    <Layout>
+    <Layout style={styles.container}>
       <div style={{ padding: 30 }}>
         {" "}
         <Carousel autoplay effect="fade" dots={false}>
@@ -24,10 +24,7 @@ const Quote = () => {
           </div>
           <div>
             <h3
-              style={{
-                display: "flex",
-                justifyContent: "center"
-              }}
+              style={styles.quoteName}
             >
               Brytahub
             </h3>
@@ -38,7 +35,7 @@ const Quote = () => {
           <div
             style={{
               display: "flex",
-              justifyContent: "center"
+              justifyContent: "center",
             }}
           >
             <h3
@@ -60,12 +57,20 @@ const Quote = () => {
 };
 
 const styles = {
+  container: {
+    backgroundColor: colors.lightYellow
+  },
   text: {
     fontSize: 18,
     fontStyle: "oblique",
-    color: colors.dark,
+    color: colors.lighterBrown,
     display: "flex",
     justifyContent: "center"
+  },
+  quoteName: {
+    display: "flex",
+    justifyContent: "center",
+    color: colors.lighterBrown
   }
 };
 

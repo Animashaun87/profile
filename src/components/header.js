@@ -1,21 +1,18 @@
 import React, { useState } from "react";
 import { Row, Col, Layout, Icon, Affix, Button } from "antd";
 import colors from "../utils/colors";
-import logo from "../utils/images/static/ab_lg.jpg";
-import Container from "./container";
+import "../utils/styles/button.css"
+import Banner from './banner';
 import { Link } from "@reach/router";
 
 function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  // const [SubMenu, setMenu] = useState(false);
-
   const date = new Date();
   const hours = date.getHours();
   let timeOfDay;
 
   const changeStyle = {
-    fontSize: 22,
-    marginLeft: 20
+    fontSize: 18,
+    fontWeight: 700,
   };
 
   if (hours < 12) {
@@ -23,132 +20,45 @@ function Header() {
     changeStyle.color = colors.white;
   } else if (hours >= 12 && hours < 17) {
     timeOfDay = "Good Day";
-    changeStyle.color = colors.pink;
+    changeStyle.color = colors.lightBrown;
   } else {
     timeOfDay = "Good Night";
-    changeStyle.color = colors.white;
+    changeStyle.color = colors.black;
   }
 
   return (
     <>
-      <Affix>
-        <Layout style={styles.layout}>
-          <Container>
-            {" "}
-            <Row
-              type="flex"
-              justify="space-around"
-              align="middle"
-              style={{ height: 70 }}
-            >
-              <Col md={14} sm={24} xs={24}>
-                <Row type="flex" align="middle">
-                  <Col
-                    className="show-mobile"
-                    align="left"
-                    style={{ paddingLeft: 0 }}
-                  >
-                    {!menuOpen ? (
-                      <Button
-                        type="link"
-                        onClick={() => setMenuOpen(!menuOpen)}
-                      >
-                        <Icon
-                          type="menu-fold"
-                          style={{ color: colors.white, fontSize: "24px" }}
-                        />
-                      </Button>
-                    ) : (
-                      <Button
-                        type="link"
-                        onClick={() => setMenuOpen(!menuOpen)}
-                      >
-                        {/* <h3>ABIDEMI</h3> */}
-                        <Icon
-                          type="close-circle"
-                          style={{ color: colors.white, fontSize: "24px" }}
-                        />
-                      </Button>
-                    )}
-                  </Col>
-
-                  <Col>
-                    <div>
-                      {" "}
-                      <Link to="/">
-                        {/* <img
-                          src={logo}
-                          alt="bidemi"
-                          height="50px"
-                          width="120px"
-                        /> */}
-                      </Link>
-                    </div>
-                  </Col>
-                  <Col style={styles.headerText} className="hide-mobile">
-                    <div style={{ marginLeft: 40 }}>
-                      <Icon
-                        type="mobile"
-                        style={{ fontSize: 20, marginRight: 8 }}
-                      />
-                      +234 816 551 9459
-                      <span style={changeStyle}>{timeOfDay}</span>
-                    </div>
-                  </Col>
-                </Row>
-              </Col>
-              <Col md={10} sm={24} xs={24}>
-                <Row type="flex" style={{ justifyContent: "flex-end" }}>
-                  <Col className="hide-mobile" style={{ marginRight: 50 }}>
-                    <Link to="/" style={styles.header}>
-                      Home
-                    </Link>
-                  </Col>
-                  <Col className="hide-mobile" style={{ marginRight: 50 }}>
-                    <Link to="/about" style={styles.header}>
-                      About
-                    </Link>
-                  </Col>
-                  <Col className="hide-mobile">
-                    <Link to="/contact" style={styles.header}>
-                      Contact
-                    </Link>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </Container>
-        </Layout>
-        {menuOpen && (
-          <div
-            className="show-mobile"
-            style={{
-              width: "80%",
-              height: "200px",
-              backgroundColor: colors.dark
-            }}
-          >
-            <Link to="/">
-              <div style={styles.mobileMenu}>
-                <Icon type="home" style={styles.mobileMenuIcon} />
-                Home
+      <Layout style={styles.layout}>
+        <Row type="flex" style={{ padding: "0px 45px 0px 45px", height: "100px"}} align="middle">
+          <Col lg={8}>
+            <div>
+              <h2 style={styles.headerLogo}>ABIDEMI.</h2>
+            </div>
+          </Col>
+          <Col lg={14}>
+            <div style={{ display: "flex" }}>
+              <div style={{ marginRight: 50}}>
+                <Link to="/" style={styles.headerText}>Home</Link>
               </div>
-            </Link>
-            <Link to="/about">
-              <div style={styles.mobileMenu}>
-                <Icon type="profile" style={styles.mobileMenuIcon} />
-                About
+              <div style={{ marginRight: 50}}>
+                <Link to="/about" style={styles.headerText}>About</Link>
               </div>
-            </Link>
-            <Link to="/contact">
-              <div style={styles.mobileMenu}>
-                <Icon type="contacts" style={styles.mobileMenuIcon} />
-                Contact
+              <div style={{ marginRight: 50}}>
+                <Link to="/portfolio" style={styles.headerText}>Portfolio</Link>
               </div>
-            </Link>
-          </div>
-        )}
-      </Affix>
+              <div>
+                <Link to="/contact" style={styles.headerText}>Contact</Link>
+              </div>
+            </div>
+          </Col>
+          <Col lg={2}>
+            <h3 style={changeStyle}>
+              { timeOfDay }!
+            </h3>
+          </Col>
+        </Row>
+      </Layout>
+        <Banner />
     </>
   );
 }
@@ -158,32 +68,28 @@ const styles = {
     color: colors.white,
     fontSize: "22px",
     fontWeight: 200,
-    fontFamily: "serif"
+    fontFamily: "serif",
   },
   headerText: {
-    color: colors.white,
-    fontSize: "18px",
-    fontWeight: 200,
-    fontFamily: "sans-serif"
+    color: colors.lightBrown,
+    fontSize: "17px",
+    fontWeight: 400,
+    fontFamily: "sans-serif",
+    transition: "0.3s",
+    textTransform: "capitalize"
+  },
+  headerLogo: {
+    color: colors.lightBrown,
+    fontWeight: 700
+  },
+  letsTalk: {
+    backgroundColor: colors.lightBrown,
+    width: "100%",
+    height: "50px",
   },
   layout: {
-    backgroundColor: colors.dark,
-    height: 70,
-    borderBottom: `2px solid ${colors.pink}`
+    backgroundColor: colors.lightYellow,
   },
-  mobileMenu: {
-    height: "60px",
-    padding: "10px 0",
-    fontSize: "15px",
-    borderBottom: `1px solid ${colors.pink}`,
-    display: "flex",
-    alignItems: "center",
-    paddingLeft: "20px",
-    color: colors.white
-  },
-  mobileMenuIcon: {
-    paddingRight: "10px"
-  }
 };
 
 export default Header;
