@@ -4,30 +4,36 @@ import { Link } from "@reach/router";
 import colors from "../utils/colors";
 import "../utils/styles/button.css";
 import "../utils/styles/contact.css";
-import Anchor from "./anchor"
+import Anchor from "./anchor";
 
 const { Footer } = Layout;
 function ProfileFooter() {
   return (
+    <div className="sm-footer">
     <Layout>
       <Footer style={styles.footerWrapper}>
-          <Row type="flex" align="middle">
-            <Col lg={16} md={16}>
-              <div>
-                <h2 style={styles.wantsToKnow}>
-                  Do you want to know <br /> more about me?
-                </h2>
-              </div>
-            </Col>
-            <Col lg={8} md={8}>
-              <div>
-                <a href="#" className="btn white-button">
-                  download CV
-                </a>
-              </div>
-            </Col>
-          </Row>
-
+        <Row
+          type="flex"
+          justify="middle"
+          align="middle"
+          style={{ marginTop: "50px" }}
+        >
+          <Col xl={14} lg={18} md={16} sm={24}>
+            <div>
+              <h2 style={styles.wantsToKnow} className="footer-text-1 footer">
+                Do you want to know more about me?
+              </h2>
+            </div>
+          </Col>
+          <Col xl={10} lg={6} md={8} sm={24}>
+            <div style={{ float: "right" }}>
+              <a href="#" className="btn white-button sm-left">
+                download CV
+              </a>
+            </div>
+          </Col>
+        </Row>
+        {/* 
         <div className="form-wrapper">
           <Row>
             <Col lg={24}>
@@ -70,34 +76,25 @@ function ProfileFooter() {
                     </div>
             </Col>
           </Row>
-        </div>
+        </div> */}
         <Anchor />
       </Footer>
     </Layout>
+    </div>
   );
 }
 
 const styles = {
   footerWrapper: {
     backgroundColor: colors.lightBrown,
+    height: "auto",
   },
   wantsToKnow: {
     color: colors.white,
     fontSize: "60px",
-    fontWeight: 600,
-    // lineHeight: 1.3,
-    // margin: 0
-  },
-  wantsToKnowCaption: {
-    fontSize: "30px",
-  },
-  btn: {
-    padding: "18px 36px",
-    background: "#FFEFAE",
-    color: "#670000 !important",
-    width: "100%",
-    cursor: "pointer",
-    fontSize: "18px"
+    fontWeight: 400,
+    lineHeight: 1.3,
+    margin: "0px",
   },
 };
 

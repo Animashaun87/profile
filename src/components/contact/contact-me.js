@@ -12,85 +12,10 @@ function ContactMe() {
       <Layout style={{ backgroundColor: colors.white }}>
         <Content>
           <Row style={{ marginTop: 50}}>
-            <Col lg={14} style={{ paddingLeft: 50}}>
-              <h2>Contact Me</h2>
-              <div>
-              <form>
-                      <Row>
-                        <Row gutter={18}>
-                        <Col lg={12} md={12}>
-                        <div style={{ marginBottom: 25}}>
-                          <input type="text" placeholder="name" className="form-input"/>
-                          </div>
-                        </Col>
-                        <Col lg={12} md={12}>
-                        <div style={{marginBottom: 25}}>
-                          <input type="email" placeholder="Email" className="form-input"/>
-                          </div>
-                          </Col>
-                          </Row>
-                          <Row>
-                          <Col lg={24}>
-                          <div style={{ marginBottom: 25}}>
-                            <input type="text" placeholder="Subject" className="form-input" />
-                          </div>
-                            </Col>
-                          </Row>
-                          <Row>
-                            <Col lg={24}>
-                            <div style={{ marginBottom: 25}}>
-                              <textarea placeholder="Message" className="form-input textarea"/>
-                            </div>
-                            <div>
-                              <button type="submit" style={styles.btn} >Send Message</button>
-                            </div>
-                            </Col>
-                          </Row>
-                      </Row>
-                    </form>
-              </div>
-            </Col>
-            <Col lg={10}>
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                <div style={{ display: "inline-flex" }}>
-                  <span style={styles.contactIcon}>
-                    <Icon
-                      type="home"
-                      style={{ color: "#8f9195", fontSize: "27px" }}
-                    />
-                  </span>
-                  <div style={styles.contactInfo}>
-                    <h3>Hajj Camp, Gwagwalada.</h3>
-                    <span>Rosemead, CA 91770</span>
-                  </div>
-                </div>
-
-                <div style={{ display: "inline-flex" }}>
-                  <span>
-                    <Icon
-                      type="tablet"
-                      style={{ color: "#8f9195", fontSize: "27px" }}
-                    />
-                  </span>
-                  <div style={styles.contactInfo}>
-                    <h3>+2348165519459</h3>
-                    <p>Mon to Sun 9am to 6pm</p>
-                  </div>
-                </div>
-
-                <div style={{ display: "inline-flex" }}>
-                  <span>
-                    <Icon
-                      type="message"
-                      style={{ color: "#8f9195", fontSize: "27px" }}
-                    />
-                  </span>
-                  <div style={styles.contactInfo}>
-                    <h3>Support@bidemi.com</h3>
-                    <p>Send us your query anytime!</p>
-                  </div>
-                </div>
-              </div>
+            <Col lg={12}>
+            <h1>Contact Me</h1>
+            <h2>Have a project you'll like me to work on?</h2>
+            <p>Send me a mail at animashaunbidemi07@gmail.com</p>
             </Col>
           </Row>
         </Content>

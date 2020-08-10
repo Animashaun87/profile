@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import ContactMe from "../components/contact/contact-me";
+import ContctBanner from "../components/contact/contactBanner";
 
 function Contact() {
   useEffect(() => {
@@ -7,6 +8,7 @@ function Contact() {
   });
   return (
     <>
+      <ContctBanner />
       <ContactMe />
     </>
   );

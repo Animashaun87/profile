@@ -11,10 +11,10 @@ function Home() {
   });
   return (
     <>
-      {/* <Banner/> */}
-      {/* <Project /> */}
+      <Banner />
       <AboutMe />
       <Experience />
+      {/* <Project /> */}
       {/* <Testimonial /> */}
     </>
   );
