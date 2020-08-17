@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import Banner from "../components/banner";
-import Testimonial from "../components/testimonial";
-import Project from "../components/projects";
-import AboutMe from '../components/about/about-me'
+import AboutMe from "../components/about/about-me";
 import Experience from "../components/experience";
+import Expertise from "../components/portfolios/expertise";
+import Portfolio from "../components/portfolios/portfolio";
+import colors from "../utils/colors";
 
 function Home() {
   useEffect(() => {
@@ -11,10 +11,12 @@ function Home() {
   });
   return (
     <>
-      <Banner />
-      <AboutMe />
-      <Experience />
+      {/* <Banner/> */}
       {/* <Project /> */}
+      {/* <AboutMe /> */}
+      {/* <Experience /> */}
+      <Expertise />
+      {/* <Portfolio /> */}
       {/* <Testimonial /> */}
     </>
   );
