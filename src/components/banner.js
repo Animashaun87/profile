@@ -8,45 +8,34 @@ import Loader from "../utils/loader";
 function Banner() {
   return (
     <>
-      {/* <div style={styles.container}>
-            <h1 style={styles.title}>ABIDEMI.</h1>
-            <p style={styles.prof}>Software Engineer</p>
-            <p style={styles.placeOfWork}>Head of design at Cubiclab</p>
-      </div> */}
       <Layout style={styles.container} className="min-height">
         <div className="position">
-          <Row type="flex" justify="space-around">
-            <Col>
-              <div>
+          <Row type="flex" justify="center">
+            <Col xl={24} lg={20} md={20} sm={20}>
+              <div style={{ textAlign: "right"}} className="top">
                 <h1
                   style={styles.title}
-                  className="banner-area sm-banner-area wide-screen self-position"
+                  className="banner-h1"
                 >
                   Abidemi.
                 </h1>
-              </div>
-            </Col>
-          </Row>
-          <Row type="flex" justify="end">
-            <Col>
-              <div style={{ paddingRight: "80px" }}>
                 <p
-                  style={styles.prof}
-                  className="sm-banner wide-screen-text item-position"
+                  style={styles.paragraph}
+                  className="paragraph"
                 >
                   Software Engineer
                 </p>
                 <p
-                  style={styles.placeOfWork}
-                  className="sm-banner wide-screen-text item-position"
+                  style={styles.paragraph}
+                  className="paragraph"
                 >
-                  Full stack developer at{" "}
-                  <span style={{ textDecoration: "underline" }}>Cubiclab</span>
+                  Full Stack Developer
+                  {/* <span style={{ textDecoration: "underline" }}>Cubiclab</span> */}
                 </p>
               </div>
             </Col>
           </Row>
-        </div>
+          </div>
       </Layout>
     </>
   );
@@ -56,7 +45,6 @@ const styles = {
   container: {
     backgroundColor: colors.lightYellow,
     minHeight: "500px",
-    width: "100%",
   },
   title: {
     color: colors.lighterBrown,
@@ -68,22 +56,13 @@ const styles = {
     marginBottom: 0,
     textTransform: "uppercase",
   },
-  prof: {
+  paragraph: {
     color: colors.lighterBrown,
     fontSize: "30px",
     fontFamily: "sans-serif",
     fontWeight: 300,
-    // textAlign: "right",
-    // paddingRight: 70,
     marginBottom: 0,
-  },
-  placeOfWork: {
-    color: colors.lighterBrown,
-    fontSize: 30,
-    fontFamily: "sans-serif",
-    fontWeight: 300,
-    // paddingRight: 70,
-    // textAlign: "right",
+    paddingRight: "23%"
   },
 };
 

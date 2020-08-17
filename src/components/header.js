@@ -70,7 +70,7 @@ function Header() {
             <h3 style={changeStyle}>{timeOfDay}</h3>
           </Col>
 
-          <Col className="show-mobile right right-ipad right-mobile show-ipad">
+          <Col className="show-mobile right right-ipad right-mobile show-ipad smaller-phone">
             {!menuOpen ? (
               <Button type="link" onClick={() => setMenuOpen(!menuOpen)}>
                 <Icon

@@ -47,6 +47,13 @@
   }
 }
 
+@media (max-width: 250) {
+  .smaller-phone {
+    position: absolute;
+    right: 20px !important;
+  }
+}
+
 @media (min-width: 300px) and (max-width: 768px) {
   .right {
     position: absolute;
@@ -62,76 +69,122 @@
 /* End Of Header Media Query*/
 
 /* Banner Media Query */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .min-height {
+    min-height: 500px !important;
+  }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .banner-area {
+  .min-height {
+    min-height: 500px !important;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .min-height {
+    min-height: 300px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .min-height {
+    min-height: 285px !important;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .top {
+    padding-top: 10px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .top {
+    padding-top: 24px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .banner-container {
+    padding-top: 80px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .banner-container {
+    padding-top: 48px;
+  }
+}
+@media (max-width: 575px) {
+  .banner-container {
+    padding-top: 54px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  .paragraph {
+    padding-right: 23% !important;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .paragraph {
+    padding-right: 85px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .paragraph {
+    font-size: 28px !important;
+    padding-right: 88px !important;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .paragraph {
+    font-size: 23px;
+    margin-bottom: 10px;
+    padding-right: 94px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .paragraph {
+    font-size: 18px !important;
+    margin-bottom: 10px;
+    padding-right: 20px !important;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-h1 {
+    font-size: 185px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .banner-h1 {
     font-size: 137px !important;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .wide-screen {
-    font-size: 63px !important;
+  .banner-h1 {
+    font-size: 90px !important;
   }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .wide-screen-text {
-    font-size: 25px !important;
-    padding-right: 24px;
-  }
-}
-
-@media (max-width: 576px) {
-  .sm-banner-area {
+@media (max-width: 575px) {
+  .banner-h1 {
     font-size: 63px !important;
     margin-bottom: 26px;
-    text-align: right !important;
   }
 }
-
-@media (max-width: 575px) {
-  .sm-banner {
-    font-size: 19px !important;
-    text-align: right;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .min-height {
-    min-height: 284px !important;
-  }
-}
-
-@media (max-width: 575px) {
-  .min-height {
-    min-height: 264px !important;
-  }
-}
-
-@media (max-width: 575px) {
-  .position {
-    position: relative;
-    margin-top: 40px;
-  }
-}
-
-@media (max-width: 575px) {
-    .self-position {
-      padding-left: 50px !important;
-    }
-  }
-
-@media (max-width: 575px) {
-    .position .item-position {
-      position: relative;
-      margin-right: -40px;
-    }
-  }
 /* End of banner media query*/
-  
 
 /* About Media Query*/
-@media  only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   .about-area {
     margin-right: 50px;
   }
@@ -160,6 +213,12 @@
 @media (max-width: 575px) {
   .about-area {
     margin-right: 0px !important;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .about-top {
+    margin-top: -80px !important;
   }
 }
 
@@ -300,15 +359,43 @@
 
 /* Footer Media Query*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .footer-text-1 {
+  .footer-text {
     font-size: 30px !important;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .footer-text-2 {
-    font-size: 35px;
+  .footer-text {
+    font-size: 35px !important;
+    margin-left: 30px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 567px) {
+  .footer-text {
+    font-size: 22px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .footer-btn {
+    float:  left !important;
+    margin-left: 30px !important;
     margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .footer-anchor {
+    margin-left: 30px !important;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .footer-copyright {
+    margin-right: 20px !important;
   }
 }
 

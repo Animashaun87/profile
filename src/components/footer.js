@@ -20,63 +20,19 @@ function ProfileFooter() {
         >
           <Col xl={14} lg={18} md={16} sm={24}>
             <div>
-              <h2 style={styles.wantsToKnow} className="footer-text-1 footer">
+              <h2 style={styles.wantsToKnow} className="footer-text">
                 Do you want to know more about me?
               </h2>
             </div>
           </Col>
           <Col xl={10} lg={6} md={8} sm={24}>
-            <div style={{ float: "right" }}>
+            <div style={{ float: "right" }} className="footer-btn">
               <a href="#" className="btn white-button sm-left">
                 download CV
               </a>
             </div>
           </Col>
         </Row>
-        {/* 
-        <div className="form-wrapper">
-          <Row>
-            <Col lg={24}>
-             
-             <div>
-              <Row>
-                <Col>
-                  <div style={{ marginBottom: 30}}>
-                    <h2 style={{ color: colors.lightYellow }}>Contact Me</h2>
-                    </div>
-                </Col>
-                </Row>
-                    <form>
-                      <Row>
-                        <Col lg={8} md={12}>
-                        <div style={{ marginBottom: 25}}>
-                          <input type="text" placeholder="name" className="form-input"/>
-                          </div>
-                        </Col>
-                        <Col lg={8} md={12}>
-                        <div style={{marginBottom: 25}}>
-                          <input type="email" placeholder="Email" className="form-input"/>
-                          </div>
-                          </Col>
-                          <Col lg={8} md={12}>
-                          <div style={{ marginBottom: 25}}>
-                            <input type="text" placeholder="Subject" className="form-input" />
-                            </div>
-                            </Col>
-                            <Col lg={24}>
-                            <div style={{ marginBottom: 25}}>
-                              <textarea placeholder="Message" className="form-input textarea"/>
-                            </div>
-                            <div>
-                              <button type="submit" style={styles.btn} >Send Message</button>
-                            </div>
-                            </Col>
-                      </Row>
-                    </form>
-                    </div>
-            </Col>
-          </Row>
-        </div> */}
         <Anchor />
       </Footer>
     </Layout>

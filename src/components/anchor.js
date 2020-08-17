@@ -2,13 +2,13 @@ import React from "react";
 import { Icon, Row, Col } from "antd";
 import colors from "../utils/colors";
 
-function Anchor() {
+function Anchor({ anchor }) {
   return (
     <>
       <div>
         <Row type="flex" justify="space-between" align="middle">
           <Col>
-            <div style={{ display: "flex", marginTop: 30, marginBottom: 30}}>
+            <div style={{ display: "flex", marginTop: 30, marginBottom: 30}} className="footer-anchor">
             <div style={styles.footerSocial}>
               <a
                 href="http://github.com/animashaun87"
@@ -35,7 +35,7 @@ function Anchor() {
             </div>
           </Col>
           <Col>
-            <div>
+            <div className="footer-copyright">
               <p style={styles.footerCopy}>
                 Copyright &copy; Abidemi Animashaun {new Date().getFullYear()}
               </p>
