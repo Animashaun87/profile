@@ -13,9 +13,9 @@ function Home() {
     <>
       {/* <Banner/> */}
       {/* <Project /> */}
-      <AboutMe />
-      <Experience />
-      <Expertise bgColor={colors.lightYellow} />
+      {/* <AboutMe /> */}
+      {/* <Experience /> */}
+      <Expertise />
       {/* <Portfolio /> */}
       {/* <Testimonial /> */}
     </>

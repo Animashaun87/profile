@@ -4,52 +4,52 @@ import colors from "../../utils/colors";
 import Portfolio from "./portfolio";
 
 function Expertise(prop) {
-  const { bgColor } = prop;
   return (
     <>
-      <Layout style={{ backgroundColor: bgColor }}>
+      <Layout style={{ backgroundColor: colors.lightYellow}}>
         <div
           style={{
             display: "flex",
             justifyContent: "center",
             marginBottom: 60,
           }}
+          className="expertise-title"
         >
           <h2 style={styles.expertise}>My Expertise</h2>
         </div>
-        <Row type="flex" justify="space-around">
-          <Col>
-            <div style={styles.expCard}>
+        <Row type="flex" justify="space-around" className="expertise-top">
+          <Col md={8} sm={12} xs={24}>
+            <div style={styles.expertiseCard} className="expertise">
               <h5 style={styles.header}>
                 Experience <br /> Design
               </h5>
               <p style={styles.subHeader}>
-                Switzerland where i am a full time <br /> product designer
+                Switzerland where i am a full time product designer
               </p>
             </div>
           </Col>
-          <Col>
-            <div style={styles.expCard}>
-              <h3 style={styles.header}>
+          <Col md={8} sm={12} xs={24}>
+            <div style={styles.expertiseCard} className="expertise">
+              <h5 style={styles.header}>
                 Interaction <br /> Design
-              </h3>
+              </h5>
               <p style={styles.subHeader}>
-                Switzerland where i am a full time <br /> product designer
+                Switzerland where i am a full time product designer
               </p>
             </div>
           </Col>
-          <Col>
-            <div style={styles.expCard}>
-              <h3 style={styles.header}>
+          <Col md={8} sm={24} xs={24}>
+            <div style={styles.expertiseCard} className="expertise">
+              <h5 style={styles.header}>
                 Front-end <br /> Design
-              </h3>
+              </h5>
               <p style={styles.subHeader}>
-                Switzerland where i am a full time <br /> product designer
+                Switzerland where i am a full time product designer
               </p>
             </div>
           </Col>
         </Row>
-        <Portfolio />
+        {/* <Portfolio /> */}
       </Layout>
     </>
   );
@@ -57,14 +57,16 @@ function Expertise(prop) {
 
 const styles = {
   expertise: {
+    display: "block",
     fontSize: "80px",
     fontWeight: 400,
     lineHeight: 1.4,
     color: colors.lightBrown,
   },
-  expCard: {
+  expertiseCard: {
     backgroundColor: colors.white,
-    padding: "36px 46px 32px 54px",
+    height: "240px",
+    margin: "0px 24px 32px 24px",
     transition: "0.4s",
   },
   header: {
@@ -73,10 +75,12 @@ const styles = {
     fontSize: "30px",
     fontWeight: 400,
     lineHeight: 1.4,
+    padding: "20px 40px",
   },
   subHeader: {
     fontSize: "18px",
     fontWeight: 400,
+    padding: "0px 40px",
   },
 };
 

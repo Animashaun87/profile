@@ -11,7 +11,7 @@ function Portfolio()
 {
     return (
         <>
-          <Row style={{ marginTop: 100 }}>
+          <Row style={{ marginTop: "65px" }}>
               <Col>
                   <h2 style={styles.h2}>Selected Portfolios</h2>
               </Col>
