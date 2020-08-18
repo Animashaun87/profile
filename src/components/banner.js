@@ -15,22 +15,18 @@ function Banner() {
               <div style={{ textAlign: "right"}} className="top">
                 <h1
                   style={styles.title}
-                  className="banner-h1"
                 >
                   Abidemi.
                 </h1>
                 <p
                   style={styles.paragraph}
-                  className="paragraph"
                 >
                   Software Engineer
                 </p>
                 <p
                   style={styles.paragraph}
-                  className="paragraph"
                 >
                   Full Stack Developer
-                  {/* <span style={{ textDecoration: "underline" }}>Cubiclab</span> */}
                 </p>
               </div>
             </Col>
@@ -48,11 +44,10 @@ const styles = {
   },
   title: {
     color: colors.lighterBrown,
-    fontSize: 187,
+    fontSize: "187px",
     fontFamily: "sans-serif",
     fontWeight: 300,
     textAlign: "center",
-    // paddingLeft: 15,
     marginBottom: 0,
     textTransform: "uppercase",
   },

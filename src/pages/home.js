@@ -12,7 +12,7 @@ function Home() {
   });
   return (
     <>
-      {/* <Banner /> */}
+      <Banner />
       {/* <Project /> */}
       <AboutMe />
       <Experience />
