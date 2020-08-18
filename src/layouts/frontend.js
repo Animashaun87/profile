@@ -5,9 +5,9 @@ import Footer from "../components/footer";
 const Frontend = props => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       {props.children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
