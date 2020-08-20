@@ -8,7 +8,7 @@ function PortfolioBanner() {
       <Row>
         <Col>
           <div className="port-banner">
-            <h2>Portfolio</h2>
+            <h2>My Portfolio</h2>
           </div>
         </Col>
       </Row>

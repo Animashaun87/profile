@@ -7,6 +7,7 @@ import "antd/dist/antd.css";
 // import Contact from "./pages/contact";
 import "./utils/styles/global.css";
 import Loader from "./utils/loader";
+import Portfolio from "./components/portfolios/portfolio";
 // import "./App.css";
 
 const retry = (fn, retriesLeft = 5, interval = 1000) => {
@@ -31,11 +32,13 @@ const Home = lazy(() => retry(() => homePromise));
 const aboutPromise = import("./pages/about");
 const About = lazy(() => retry(() => aboutPromise));
 
+const PortfoliosPromise = import("./pages/portfolios");
+const Portfolios = lazy(() => retry(() => PortfoliosPromise));
+
 const contactPromise = import("./pages/contact");
 const Contact = lazy(() => retry(() => contactPromise));
 
 function App() {
-  
   return (
     <>
       <Suspense fallback={<Loader />}>
@@ -43,6 +46,7 @@ function App() {
           <Frontend path="/">
             <Home path="/" />
             <About path="about" />
+            <Portfolios path="portfolio" />
             <Contact path="contact" />
           </Frontend>
         </Router>

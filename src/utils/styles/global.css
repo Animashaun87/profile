@@ -255,25 +255,24 @@
 
 @media (max-width: 575px) {
   .expertise-title {
-    display: flex !important;
-    justify-content: flex-start !important;
-    margin-top: 50px;
-    margin-left: 32px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px !important;
+    margin-left: 32px !important;
   }
 }
 
 @media (max-width: 575px) {
-  .expertise-title > h2 {
+  .expertise-title h2 {
     font-size: 29px !important;
     font-weight: 500 !important;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .expertise-title > h2 {
-    font-size: 31px !important;
+  .expertise-title h2 {
+    font-size: 52px !important;
     font-weight: 500 !important;
-    margin-top: 50px;
   }
 }
 

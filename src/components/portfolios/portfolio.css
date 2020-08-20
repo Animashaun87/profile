@@ -27,7 +27,7 @@
 .port-banner {
   background-color: #ffefae;
   height: 200px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   padding-top: 50px;
 }
 

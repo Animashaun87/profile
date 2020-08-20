@@ -1,22 +1,21 @@
 import React from "react";
 import { Row, Col, Layout } from "antd";
 import colors from "../../utils/colors";
-import Portfolio from "./portfolio";
 
 function Expertise(prop) {
   return (
     <>
-      <Layout style={{ backgroundColor: colors.lightYellow}}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: 60,
-          }}
+      <Layout style={{ backgroundColor: colors.lightYellow }}>
+        <Row
+          type="flex"
+          justify="center"
+          style={{ margin: "78px 0px 45px 0px" }}
           className="expertise-title"
         >
-          <h2 style={styles.expertise}>My Expertise</h2>
-        </div>
+          <Col>
+            <h2 style={styles.expertise}>My Expertise</h2>
+          </Col>
+        </Row>
         <Row type="flex" justify="space-around" className="expertise-top">
           <Col md={8} sm={12} xs={24}>
             <div style={styles.expertiseCard} className="expertise">
@@ -49,7 +48,6 @@ function Expertise(prop) {
             </div>
           </Col>
         </Row>
-        {/* <Portfolio /> */}
       </Layout>
     </>
   );
