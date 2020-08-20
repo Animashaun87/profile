@@ -154,12 +154,19 @@ body {
 }
 /*End Expertise*/
 
-@media screen and (max-width: 567px) {
-  .hide-small-phone {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    align-content: center;
+/** Porfolio */
+@media (max-width: 567px) {
+  .portfolio {
+    font-size: 28px !important;
+    text-align: left;
+    margin-bottom: 38px;
+  }
+}
+
+@media (max-width: 567px) {
+  .portfolio-img {
+    width: 100%;
+    padding: 0px 20px 20px 20px;
   }
 }
 
@@ -196,7 +203,7 @@ body {
     font-weight: 500px !important;
   }
 }
-/* End Of Expertise*?
+/* End Of Portfolio*?
 
 /*
 .grow {
