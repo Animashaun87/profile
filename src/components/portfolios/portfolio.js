@@ -20,19 +20,39 @@ function Portfolio() {
 
         <Row type="flex" justify="space-around">
           <Col>
-            <img src={Gallery1} alt="Porfolio" className="portfolio-img" />
+            <img
+              src={Gallery1}
+              alt="Porfolio"
+              className="portfolio-img"
+              height="476"
+            />
           </Col>
           <Col>
-            <img src={Gallery2} alt="Porfolio" className="portfolio-img" />
+            <img
+              src={Gallery2}
+              alt="Porfolio"
+              className="portfolio-img"
+              height="476"
+            />
           </Col>
         </Row>
 
         <Row type="flex" justify="space-around" style={{ marginTop: "20px" }}>
           <Col>
-            <img src={Gallery3} alt="Portfolio" className="portfolio-img" />
+            <img
+              src={Gallery3}
+              alt="Portfolio"
+              className="portfolio-img"
+              height="476"
+            />
           </Col>
           <Col>
-            <img src={Gallery4} alt="Portfolio" className="portfolio-img" />
+            <img
+              src={Gallery4}
+              alt="Portfolio"
+              className="portfolio-img"
+              height="476"
+            />
           </Col>
         </Row>
       </Layout>
