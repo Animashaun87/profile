@@ -1,0 +1,39 @@
+.port-area {
+  background: #fff;
+  position: relative;
+  margin-right: 100px;
+}
+
+.port-area::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 27%;
+  background: #ffefae;
+  right: -100px;
+  z-index: -1;
+  top: 0;
+}
+
+.port-text {
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 300;
+  padding-right: 50px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.port-banner {
+  background-color: #ffefae;
+  height: 200px;
+  text-transform: uppercase;
+  padding-top: 50px;
+}
+
+.port-banner h2 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #670000;
+  padding-left: 40px;
+}
