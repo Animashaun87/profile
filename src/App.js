@@ -13,7 +13,7 @@ const retry = (fn, retriesLeft = 5, interval = 1000) => {
   return new Promise((resolve, reject) => {
     fn()
       .then(resolve)
-      .catch(error => {
+      .catch((error) => {
         setTimeout(() => {
           if (retriesLeft === 1) {
             reject(error);
@@ -35,16 +35,17 @@ const contactPromise = import("./pages/contact");
 const Contact = lazy(() => retry(() => contactPromise));
 
 function App() {
+  
   return (
     <>
       <Suspense fallback={<Loader />}>
-        <Frontend>
-          <Router>
+        <Router>
+          <Frontend path="/">
             <Home path="/" />
-            <About path="/about" />
-            <Contact path="/contact" />
-          </Router>
-        </Frontend>
+            <About path="about" />
+            <Contact path="contact" />
+          </Frontend>
+        </Router>
       </Suspense>
     </>
   );
