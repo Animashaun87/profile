@@ -1,12 +1,17 @@
 import React from "react";
-import Portfolio from "./portfolio";
+import { Row, Col } from "antd";
+import "./portfolio.css";
 
 function PortfolioBanner() {
   return (
     <>
-      <div>
-        <h1>Nice</h1>
-      </div>
+      <Row>
+        <Col>
+          <div className="port-banner">
+            <h2>Portfolio</h2>
+          </div>
+        </Col>
+      </Row>
     </>
   );
 }
