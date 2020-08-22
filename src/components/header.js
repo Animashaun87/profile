@@ -9,23 +9,6 @@ function Header(props) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // const handleScroll = () => {
-  //   const offSet = window.scrollY;
-  //   const nav = document.getElementById("nav");
-  //   if (offSet > 200) {
-  //     setScrolled(nav.classList.add("scrolled"));
-  //   } else {
-  //     setScrolled(nav.classList.remove("scrolled"));
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // });
-
   const handleScroll = () => {
     if (window.scrollY >= 250) {
       setScrolled(true);
