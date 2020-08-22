@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, Layout, Icon, Button, Affix } from "antd";
 import colors from "../utils/colors";
 import "../utils/styles/button.css";
@@ -7,6 +7,39 @@ import "./header.css";
 
 function Header(props) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // const handleScroll = () => {
+  //   const offSet = window.scrollY;
+  //   const nav = document.getElementById("nav");
+  //   if (offSet > 200) {
+  //     setScrolled(nav.classList.add("scrolled"));
+  //   } else {
+  //     setScrolled(nav.classList.remove("scrolled"));
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // });
+
+  const handleScroll = () => {
+    if (window.scrollY >= 250) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
 
   const date = new Date();
   const hours = date.getHours();
@@ -30,94 +63,92 @@ function Header(props) {
 
   return (
     <>
-      <Affix>
-        <Layout style={styles.layout}>
-          <Row
-            type="flex"
-            align="middle"
-            style={{
-              padding: "0px 45px 0px 45px",
-              height: "100px",
-              boxShadow: 20,
-            }}
-          >
-            <Col lg={8}>
-              <h2>
-                <Link to="/" style={styles.headerLogo}>
-                  ABIDEMI
+      <Layout style={styles.layout} className={scrolled ? "navbar" : "nav"}>
+        <Row
+          type="flex"
+          align="middle"
+          style={{
+            padding: "0px 45px 0px 45px",
+            height: "100px",
+            boxShadow: 20,
+          }}
+        >
+          <Col lg={8}>
+            <h2>
+              <Link to="/" style={styles.headerLogo}>
+                ABIDEMI
+              </Link>
+            </h2>
+          </Col>
+          <Col lg={13} className="hide-mobile hide-ipad">
+            <div style={{ display: "flex" }}>
+              <div style={{ paddingRight: 50 }}>
+                <Link
+                  to="/"
+                  className={`header ${props.path === "/" ? "active" : ""}`}
+                >
+                  Home
                 </Link>
-              </h2>
-            </Col>
-            <Col lg={13} className="hide-mobile hide-ipad">
-              <div style={{ display: "flex" }}>
-                <div style={{ paddingRight: 50 }}>
-                  <Link
-                    to="/"
-                    className={`header ${props.path === "/" ? "active" : ""}`}
-                  >
-                    Home
-                  </Link>
-                </div>
-                <div style={{ paddingRight: 50 }}>
-                  <Link
-                    to="/about"
-                    className={`header ${
-                      props.path === "/about" ? "active" : ""
-                    }`}
-                  >
-                    About
-                  </Link>
-                </div>
-                <div style={{ paddingRight: 50 }}>
-                  <Link
-                    to="/portfolio"
-                    className={`header ${
-                      props.path === "/portfolio" ? "active" : ""
-                    }`}
-                  >
-                    portfolio
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    to="/contact"
-                    className={`header ${
-                      props.path === "/contact" ? "active" : ""
-                    }`}
-                  >
-                    Contact
-                  </Link>
-                </div>
               </div>
-            </Col>
-            <Col lg={3} className="hide-mobile hide-ipad">
-              <h3 style={changeStyle}>{timeOfDay}</h3>
-            </Col>
+              <div style={{ paddingRight: 50 }}>
+                <Link
+                  to="/about"
+                  className={`header ${
+                    props.path === "/about" ? "active" : ""
+                  }`}
+                >
+                  About
+                </Link>
+              </div>
+              <div style={{ paddingRight: 50 }}>
+                <Link
+                  to="/portfolio"
+                  className={`header ${
+                    props.path === "/portfolio" ? "active" : ""
+                  }`}
+                >
+                  portfolio
+                </Link>
+              </div>
+              <div>
+                <Link
+                  to="/contact"
+                  className={`header ${
+                    props.path === "/contact" ? "active" : ""
+                  }`}
+                >
+                  Contact
+                </Link>
+              </div>
+            </div>
+          </Col>
+          <Col lg={3} className="hide-mobile hide-ipad">
+            <h3 style={changeStyle}>{timeOfDay}</h3>
+          </Col>
 
-            <Col className="show-mobile right right-ipad right-mobile show-ipad smaller-phone">
-              {!menuOpen ? (
-                <Button type="link" onClick={() => setMenuOpen(!menuOpen)}>
-                  <Icon
-                    type="menu"
-                    style={{
-                      color: colors.lightBrown,
-                      fontSize: "28px",
-                      fontWeight: 900,
-                    }}
-                  />
-                </Button>
-              ) : (
-                <Button type="link" onClick={() => setMenuOpen(!menuOpen)}>
-                  <Icon
-                    type="close"
-                    style={{ color: colors.lightBrown, fontSize: "24px" }}
-                  />
-                </Button>
-              )}
-            </Col>
-          </Row>
-        </Layout>
-      </Affix>
+          <Col className="show-mobile right right-ipad right-mobile show-ipad smaller-phone">
+            {!menuOpen ? (
+              <Button type="link" onClick={() => setMenuOpen(!menuOpen)}>
+                <Icon
+                  type="menu"
+                  style={{
+                    color: colors.lightBrown,
+                    fontSize: "28px",
+                    fontWeight: 900,
+                  }}
+                />
+              </Button>
+            ) : (
+              <Button type="link" onClick={() => setMenuOpen(!menuOpen)}>
+                <Icon
+                  type="close"
+                  style={{ color: colors.lightBrown, fontSize: "24px" }}
+                />
+              </Button>
+            )}
+          </Col>
+        </Row>
+      </Layout>
 
       {menuOpen && (
         <div

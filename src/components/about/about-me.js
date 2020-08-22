@@ -7,10 +7,7 @@ import "./about.css";
 function AboutMe() {
   return (
     <>
-      <Layout
-        className="about-area"
-        style={{ padding: "80px 0px" }}
-      >
+      <Layout className="about-area" style={{ padding: "80px 0px" }}>
         <Row className="about-top">
           <Col lg={12} sm={24} xs={24}>
             <div style={{ padding: "50px 0px 0px 20px" }}>
@@ -18,17 +15,23 @@ function AboutMe() {
                 About
               </h2>
               <p className="about-text about-paragraph">
-                For more than 5 years now, design has been the central piece of
-                my world. On this fast and mind-blowing journey, I have moved
-                over the years from being a visual designer to a full-time UX/UI
-                thinker and designer.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
 
               <p className="about-text about-paragraph">
-                At the moment, this journey has brought me to Cloud Academy in
-                Mendrisio, Switzerland where I am a full-time Product Designer.
-                In this position, as with freelance, I am working remotely and I
-                have been for approximately two years.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
             </div>
           </Col>
@@ -36,7 +39,7 @@ function AboutMe() {
             <img
               src={Bidemi}
               alt="Bidemi"
-              style={{ width: "100%", paddingRight: 25 }}
+              style={styles.img}
               height="600"
               className="about-img"
             />
@@ -65,6 +68,10 @@ const styles = {
   title: {
     fontSize: 15,
     color: colors.darker,
+  },
+  img: {
+    width: "100%",
+    paddingRight: 25,
   },
 };
 export default AboutMe;

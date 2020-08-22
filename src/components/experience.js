@@ -8,7 +8,7 @@ function Experience() {
       <Layout style={styles.layout}>
         <div style={styles.container} className="container">
           <Row>
-            <Col style={{ marginTop: 50 }}>
+            <Col style={{ marginTop: "50px" }}>
               <h1 style={styles.title} className="exp-title">
                 Experience
               </h1>
@@ -30,11 +30,15 @@ function Experience() {
                   </a>
                 </span>
               </div>
-              <p style={styles.subText1} className="exp-date">Nov 1 2019 - Jan 31 2020</p>
+              <p style={styles.subText1} className="exp-date">
+                Nov 1 2019 - Jan 31 2020
+              </p>
             </Col>
             <Col style={{ marginBottom: 70 }}>
               <div style={styles.experience}>
-                <h2 style={styles.text} className="title-exp-h2">Fullstack Developer</h2>
+                <h2 style={styles.text} className="title-exp-h2">
+                  Fullstack Developer
+                </h2>
                 <span>
                   <a
                     href="https://brytahub.com"
@@ -47,7 +51,9 @@ function Experience() {
                   </a>
                 </span>
               </div>
-              <p style={styles.subText1} className="exp-date">Nov 1 2018 - Dec 20 2019</p>
+              <p style={styles.subText1} className="exp-date">
+                Nov 1 2018 - Dec 20 2019
+              </p>
             </Col>
           </Row>
         </div>
