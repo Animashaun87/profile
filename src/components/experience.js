@@ -16,7 +16,7 @@ function Experience() {
             <Col style={{ marginBottom: 70 }}>
               <div style={styles.experience}>
                 <h2 style={styles.text} className="title-exp-h2">
-                  Fullstack Developer
+                  Full Stack Developer
                 </h2>
                 <span>
                   <a
@@ -37,7 +37,7 @@ function Experience() {
             <Col style={{ marginBottom: 70 }}>
               <div style={styles.experience}>
                 <h2 style={styles.text} className="title-exp-h2">
-                  Fullstack Developer
+                  Full Stack Developer
                 </h2>
                 <span>
                   <a

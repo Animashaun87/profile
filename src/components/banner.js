@@ -1,37 +1,21 @@
 import React from "react";
-import { Row, Col, Button, Icon, Layout } from "antd";
+import { Row, Col, Layout } from "antd";
 import colors from "../utils/colors";
 import "../utils/styles/button.css";
-import Anchor from "./anchor";
-import Loader from "../utils/loader";
 
 function Banner() {
   return (
     <>
       <Layout style={styles.container} className="min-height">
-        <div className="position">
-          <Row type="flex" justify="center">
-            <Col xl={24} lg={20} md={20} sm={20}>
-              <div style={{ textAlign: "right"}} className="top">
-                <h1
-                  style={styles.title}
-                >
-                  Abidemi.
-                </h1>
-                <p
-                  style={styles.paragraph}
-                >
-                  Software Engineer
-                </p>
-                <p
-                  style={styles.paragraph}
-                >
-                  Full Stack Developer
-                </p>
-              </div>
-            </Col>
-          </Row>
-          </div>
+        <Row type="flex" justify="center">
+          <Col xl={24} lg={20} md={20} sm={20}>
+            <div style={{ textAlign: "right" }} className="top">
+              <h1 style={styles.title}>Abidemi.</h1>
+              <p style={styles.paragraph}>Software Engineer</p>
+              <p style={styles.paragraph}>Fullstack Developer</p>
+            </div>
+          </Col>
+        </Row>
       </Layout>
     </>
   );
@@ -44,7 +28,7 @@ const styles = {
   },
   title: {
     color: colors.lighterBrown,
-    fontSize: "187px",
+    fontSize: "188px",
     fontFamily: "sans-serif",
     fontWeight: 300,
     textAlign: "center",
@@ -57,7 +41,7 @@ const styles = {
     fontFamily: "sans-serif",
     fontWeight: 300,
     marginBottom: 0,
-    paddingRight: "23%"
+    paddingRight: "23%",
   },
 };
 

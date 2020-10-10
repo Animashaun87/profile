@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
-import AboutBanner from "../components/about/aboutBanner";
+import PageBanner from "../components/pages-banner";
 import AboutMe from "../components/about/about-me";
+import Skills from "../components/about/skills";
 import Quote from "../components/about/quote";
+import { ScrollToTop } from "../utils/back-top";
 
 function About() {
   useEffect(() => {
@@ -9,9 +11,11 @@ function About() {
   });
   return (
     <>
-      <AboutBanner />
+      <PageBanner title={"About"} />
       <AboutMe />
+      <Skills />
       <Quote />
+      <ScrollToTop />
     </>
   );
 }

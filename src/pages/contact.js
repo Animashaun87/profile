@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ContactMe from "../components/contact/contact-me";
-import ContctBanner from "../components/contact/contactBanner";
+import PageBanner from "../components/pages-banner";
+import { ScrollToTop } from "../utils/back-top";
 
 function Contact() {
   useEffect(() => {
@@ -8,8 +9,9 @@ function Contact() {
   });
   return (
     <>
-      <ContctBanner />
+      <PageBanner title={"Contact"} />
       <ContactMe />
+      <ScrollToTop />
     </>
   );
 }

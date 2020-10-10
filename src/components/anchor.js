@@ -2,36 +2,43 @@ import React from "react";
 import { Icon, Row, Col } from "antd";
 import colors from "../utils/colors";
 
-function Anchor({ anchor }) {
+function Anchor() {
   return (
     <>
       <div>
         <Row type="flex" justify="space-between" align="middle">
           <Col>
-            <div style={{ display: "flex", marginTop: 30, marginBottom: 30}} className="footer-anchor">
-            <div style={styles.footerSocial}>
-              <a
-                href="http://github.com/animashaun87"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon type="github" style={styles.footerSocialChild} />
-              </a>
-            </div>
-            <div style={styles.footerSocial}>
-              <a
-                href="http://medium.com/@animashaunbidemi07"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon type="medium" style={styles.footerSocialChild} />
-              </a>
-            </div>
-            <div style={styles.footerSocial}>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <Icon type="twitter" style={styles.footerSocialChild} />
-              </a>
-            </div>
+            <div
+              style={{ display: "flex", marginTop: 30, marginBottom: 30 }}
+              className="footer-anchor"
+            >
+              <div style={styles.footerSocial}>
+                <a
+                  href="http://github.com/animashaun87"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon type="github" style={styles.footerSocialChild} />
+                </a>
+              </div>
+              <div style={styles.footerSocial}>
+                <a
+                  href="http://medium.com/@animashaunbidemi07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon type="medium" style={styles.footerSocialChild} />
+                </a>
+              </div>
+              <div style={styles.footerSocial}>
+                <a
+                  href="https://bidemi.twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon type="twitter" style={styles.footerSocialChild} />
+                </a>
+              </div>
             </div>
           </Col>
           <Col>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Container = props => {
+const Container = (props) => {
   const { height, children, display, minHeight } = props;
   return (
     <>
@@ -10,7 +10,7 @@ const Container = props => {
           marginLeft: "5%",
           height: height || "100%",
           minHeight: minHeight || "",
-          display: display || ""
+          display: display || "",
         }}
       >
         {children}

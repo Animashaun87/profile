@@ -1,22 +1,48 @@
 import React from "react";
-import { Row, Col, Icon, Layout, Button } from "antd";
+import { Row, Col, Layout, Carousel } from "antd";
 import colors from "../../utils/colors";
-import "../../utils/styles/contact.css";
-import {Map, Marker, GoogleApiWrapper} from 'google-maps-react'
-
 
 const { Content } = Layout;
 function ContactMe() {
   return (
     <>
-      <Layout style={{ backgroundColor: colors.white }}>
+      <Layout style={{ backgroundColor: colors.white, height: 500 }}>
         <Content>
-          <Row style={{ marginTop: 50}}>
-            <Col lg={12}>
-            <h1>Contact Me</h1>
-            <h2>Have a project you'll like me to work on?</h2>
-            <p>Send me a mail at animashaunbidemi07@gmail.com</p>
+          <Carousel autoplay effect="fade">
+            <Row type="flex" justify="center" style={{ marginTop: "34px" }}>
+              <Col>
+                <h1
+                  style={{
+                    color: colors.lightBrown,
+                    fontSize: "36px",
+                    marginBottom: "0",
+                  }}
+                >
+                  Contact Me
+                </h1>
+                <h2>Have a project you'll like me to work on?</h2>
+              </Col>
+              <Col>
+                <h1>Send me a mail at animashaunbidemi07@gmail.com</h1>
+              </Col>
+            </Row>
+          </Carousel>
+          <Row type="flex" justify="center" align="middle">
+            {/* <Col>
+              <h2>Send me a mail at animashaunbidemi07@gmail.com</h2>
             </Col>
+            <Col>
+              <div>Contact Number</div>
+            </Col>
+            <Col>
+              <div>Email Address</div>
+            </Col>
+            <Col>
+              <div>Website</div>
+            </Col>
+            <Col>
+              <div>Address</div>
+            </Col> */}
           </Row>
         </Content>
       </Layout>
@@ -24,33 +50,4 @@ function ContactMe() {
   );
 }
 
-const styles = {
-  contactTitle: {
-    fontSize: "27px",
-    fontWeight: 600,
-    textTransform: "capitalize",
-  },
-  contactForm: {
-    marginBottom: "30px",
-    fontSize: "14px",
-    outLine: "0",
-    boxShadow: "none",
-  },
-  formGroup: {
-    marginBottom: "10px",
-    // padding: "10px"
-  },
-  contactInfo: {
-    fontSize: "16px",
-    marginBottom: 0,
-    color: "#2a2a2a",
-    padding: "0px 3px 0px 7px",
-  },
-  contactIcon: {
-    margingRight: "20px",
-  },
-};
-
-export default GoogleApiWrapper({
-  'apiKey': ('AIzaSyBvQD3pXkWCUYFZd_BmiKL4QmNFXmIjbFw')
-})(ContactMe);
+export default ContactMe;

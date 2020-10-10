@@ -1,11 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Row, Col, Layout } from "antd";
 import colors from "../../utils/colors";
+import "../../utils/styles/pages.css";
 
-function Expertise(prop) {
+function Expertise(props) {
+  const { bgColor, portBg, wrapper } = props;
   return (
     <>
-      <Layout style={{ backgroundColor: colors.lightYellow }}>
+      <Layout className={`${bgColor} || ${portBg}`}>
         <Row
           type="flex"
           justify="center"
@@ -18,32 +21,35 @@ function Expertise(prop) {
         </Row>
         <Row type="flex" justify="space-around" className="expertise-top">
           <Col md={8} sm={12} xs={24}>
-            <div style={styles.expertiseCard} className="expertise">
-              <h5 style={styles.header}>
-                Experience <br /> Design
-              </h5>
+            <div
+              style={styles.expertiseCard}
+              className={`expertise ${wrapper}`}
+            >
+              <h5 style={styles.header}>ReactJs</h5>
               <p style={styles.subHeader}>
-                Switzerland where i am a full time product designer
+                Reactjs developer with exemplary experience
               </p>
             </div>
           </Col>
           <Col md={8} sm={12} xs={24}>
-            <div style={styles.expertiseCard} className="expertise">
-              <h5 style={styles.header}>
-                Interaction <br /> Design
-              </h5>
+            <div
+              style={styles.expertiseCard}
+              className={`expertise ${wrapper}`}
+            >
+              <h5 style={styles.header}>NodeJs</h5>
               <p style={styles.subHeader}>
-                Switzerland where i am a full time product designer
+                Nodejs developer with exemplary experience
               </p>
             </div>
           </Col>
           <Col md={8} sm={24} xs={24}>
-            <div style={styles.expertiseCard} className="expertise">
-              <h5 style={styles.header}>
-                Front-end <br /> Design
-              </h5>
+            <div
+              style={styles.expertiseCard}
+              className={`expertise ${wrapper}`}
+            >
+              <h5 style={styles.header}>Laravel</h5>
               <p style={styles.subHeader}>
-                Switzerland where i am a full time product designer
+                Laravel developer with exemplary expereience
               </p>
             </div>
           </Col>
@@ -52,6 +58,12 @@ function Expertise(prop) {
     </>
   );
 }
+
+Expertise.propTypes = {
+  bgColor: PropTypes.string,
+  portBg: PropTypes.string,
+  wrapper: PropTypes.string,
+};
 
 const styles = {
   expertise: {

@@ -10,10 +10,14 @@ const Loader = () => {
         justifyContent: "center",
         alignItems: "center",
         // backgroundColor: colors.dark,
-        marginTop: "15%"
+        marginTop: "15%",
       }}
     >
-      <Icon type="sync" style={{ fontSize: 70, color: colors.lightBrown }} spin />
+      <Icon
+        type="sync"
+        style={{ fontSize: 70, color: colors.lightBrown }}
+        spin
+      />
     </div>
   );
 };

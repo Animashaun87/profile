@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Layout, Icon, Button, Affix } from "antd";
+import { Row, Col, Icon, Button } from "antd";
+import { ContactsOutlined, ProfileOutlined } from "@ant-design/icons";
 import colors from "../utils/colors";
 import "../utils/styles/button.css";
 import { Link } from "@reach/router";
-import "./header.css";
+import "../utils/styles/pages.css";
+import ScrollIndicator from "../utils/scroll-progess";
+import PropTypes from "prop-types";
+import ChangeText from "./animationText";
 
 function Header(props) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY >= 250) {
+    const scrollCheck = document.scrollingElement.scrollTop;
+    if (scrollCheck > 170) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -22,31 +27,12 @@ function Header(props) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
-
-  const date = new Date();
-  const hours = date.getHours();
-  let timeOfDay;
-
-  const changeStyle = {
-    fontSize: 20,
-    fontWeight: 700,
-  };
-
-  if (hours < 12) {
-    timeOfDay = "Good Morning";
-    changeStyle.color = colors.lighterBrown;
-  } else if (hours >= 12 && hours < 17) {
-    timeOfDay = "Good Day";
-    changeStyle.color = colors.lightBrown;
-  } else {
-    timeOfDay = "Good Night";
-    changeStyle.color = colors.black;
-  }
+  }, []);
 
   return (
     <>
-      <Layout style={styles.layout} className={scrolled ? "navbar" : "nav"}>
+      <div className={scrolled ? "navbar" : "nav"}>
+        {/* <ScrollIndicator /> */}
         <Row
           type="flex"
           align="middle"
@@ -56,16 +42,20 @@ function Header(props) {
             boxShadow: 20,
           }}
         >
-          <Col lg={8}>
+          <Col lg={8} style={{ marginBottom: "15px" }}>
             <h2>
               <Link to="/" style={styles.headerLogo}>
                 ABIDEMI
               </Link>
             </h2>
           </Col>
-          <Col lg={13} className="hide-mobile hide-ipad">
+          <Col
+            lg={13}
+            className="hide-mobile hide-ipad"
+            style={{ marginBottom: "16px" }}
+          >
             <div style={{ display: "flex" }}>
-              <div style={{ paddingRight: 50 }}>
+              <div style={{ paddingRight: "50px" }}>
                 <Link
                   to="/"
                   className={`header ${props.path === "/" ? "active" : ""}`}
@@ -105,8 +95,14 @@ function Header(props) {
               </div>
             </div>
           </Col>
-          <Col lg={3} className="hide-mobile hide-ipad">
-            <h3 style={changeStyle}>{timeOfDay}</h3>
+          <Col
+            lg={3}
+            className="hide-mobile hide-ipad"
+            style={{ marginBottom: "15px" }}
+          >
+            <h4 style={styles.typicalText}>
+              <ChangeText />
+            </h4>
           </Col>
 
           <Col className="show-mobile right right-ipad right-mobile show-ipad smaller-phone">
@@ -118,6 +114,7 @@ function Header(props) {
                     color: colors.lightBrown,
                     fontSize: "28px",
                     fontWeight: 900,
+                    transition: "all 5s ease-out",
                   }}
                 />
               </Button>
@@ -131,73 +128,65 @@ function Header(props) {
             )}
           </Col>
         </Row>
-      </Layout>
 
-      {menuOpen && (
-        <div
-          className="show-mobile show-ipad"
-          style={{
-            width: "80%",
-            height: "220px",
-            backgroundColor: colors.white,
-            position: "absolute",
-            zIndex: 1,
-            top: "100px",
-            marginLeft: "10%",
-          }}
-        >
-          <Link to="/">
-            <div style={styles.mobileMenu}>
-              <Icon type="home" style={styles.mobileMenuIcon} />
-              Home
-            </div>
-          </Link>
-          <Link to="/about">
-            <div style={styles.mobileMenu}>
-              <Icon type="" />
-              About
-            </div>
-          </Link>
-          <Link to="/">
-            <div style={styles.mobileMenu}>
-              <Icon type="" />
-              Portfolio
-            </div>
-          </Link>
-          <Link to="/contact">
-            <div style={styles.mobileMenu}>
-              <Icon type="" />
-              Contact
-            </div>
-          </Link>
-        </div>
-      )}
+        {menuOpen && (
+          <div
+            className="show-mobile show-ipad"
+            style={{
+              width: "90%",
+              // height: "220px",
+              backgroundColor: colors.lightBrown,
+              position: "absolute",
+              zIndex: 999,
+              top: "84px",
+              marginRight: "10%",
+            }}
+          >
+            <Link to="/">
+              <div style={styles.mobileMenu}>
+                <Icon type="home" style={styles.mobileMenuIcon} />
+                Home
+              </div>
+            </Link>
+            <Link to="/about">
+              <div style={styles.mobileMenu}>
+                <ProfileOutlined style={{ paddingRight: "10px" }} />
+                About
+              </div>
+            </Link>
+            <Link to="/portfolio">
+              <div style={styles.mobileMenu}>
+                <Icon type="" />
+                Portfolio
+              </div>
+            </Link>
+            <Link to="/contact">
+              <div style={styles.mobileMenu}>
+                <ContactsOutlined style={{ paddingRight: "10px" }} />
+                Contact
+              </div>
+            </Link>
+          </div>
+        )}
+      </div>
     </>
   );
 }
 
+Header.propTypes = {
+  path: PropTypes.string.isRequired,
+};
+
 const styles = {
-  layout: {
-    backgroundColor: colors.lightYellow,
-    height: "auto",
-  },
   header: {
     color: colors.white,
     fontSize: "22px",
-    fontWeight: 200,
+    fontWeight: "200",
     fontFamily: "serif",
   },
-  // headerText: {
-  //   color: colors.lightBrown,
-  //   fontSize: "17px",
-  //   fontWeight: 400,
-  //   fontFamily: "sans-serif",
-  //   transition: "0.3s",
-  //   textTransform: "capitalize",
-  // },
   headerLogo: {
     color: colors.lightBrown,
-    fontWeight: 700,
+    fontWeight: "700",
   },
   letsTalk: {
     backgroundColor: colors.lightBrown,
@@ -208,7 +197,7 @@ const styles = {
     padding: "10px 0",
     fontSize: "18px",
     paddingLeft: "20px",
-    color: colors.black,
+    color: colors.lightYellow,
   },
   mobileMenuIcon: {
     paddingRight: "12px",
@@ -216,6 +205,12 @@ const styles = {
   active: {
     borderBottom: "1px solid #670000",
     padding: "2px 2px 10px 2px",
+  },
+  typicalText: {
+    fontSize: 16,
+    fontWeight: "700",
+    color: colors.lightBrown,
+    textTransform: "uppercase",
   },
 };
 

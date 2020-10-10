@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
-import PortfolioBanner from "../components/portfolios/portfolio-banner";
+import PageBanner from "../components/pages-banner";
 import Expertise from "../components/portfolios/expertise";
 import Portfolio from "../components/portfolios/portfolio";
+import "../utils/styles/pages.css";
+import { ScrollToTop } from "../utils/back-top";
 
 function Portfolios() {
   useEffect(() => {
@@ -9,9 +11,10 @@ function Portfolios() {
   });
   return (
     <>
-      <PortfolioBanner />
-      <Expertise />
-      <Portfolio />
+      <PageBanner title={"My Portfolio"} />
+      <Expertise portBg={"about-area"} wrapper={"wrapper"} />
+      <Portfolio title={"My Portfolios"} />
+      <ScrollToTop />
     </>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Layout } from "antd";
 import colors from "../../utils/colors";
 import Bidemi from "../../utils/images/Bidemi.jpg";
-import "./about.css";
+import "../../utils/styles/pages.css";
 
 function AboutMe() {
   return (
