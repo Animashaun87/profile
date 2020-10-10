@@ -12,10 +12,13 @@ function Home() {
     document.title = "Home";
   });
 
+  const info =
+    "Hi, I'm Abidemi Animashaun. I am a software engineer adept at writing functional and scalable code";
+
   return (
     <>
       <Banner />
-      <AboutMe />
+      <AboutMe about={info} />
       <Experience />
       <Expertise bgColor={"home-bg"} />
       <Portfolio title={"Selected Porfolios"} />

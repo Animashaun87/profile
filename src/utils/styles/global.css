@@ -462,7 +462,6 @@
   .about-area {
     margin-right: 50px !important;
     padding: 0px 20px !important;
-    min-height: 1050px;
   }
 }
 
@@ -544,6 +543,7 @@
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .about-img {
     padding: 0px 20px !important;
+    margin-bottom: 30px;
   }
 }
 

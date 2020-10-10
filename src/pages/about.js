@@ -9,10 +9,13 @@ function About() {
   useEffect(() => {
     document.title = "About";
   });
+
+  const info =
+    "Hi, I'm Abidemi Animashaun. I am a software engineer who basically";
   return (
     <>
       <PageBanner title={"About"} />
-      <AboutMe />
+      <AboutMe about={info} />
       <Skills />
       <Quote />
       <ScrollToTop />
