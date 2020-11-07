@@ -32,7 +32,7 @@ function Header(props) {
   return (
     <>
       <div className={scrolled ? "navbar" : "nav"}>
-        {/* <ScrollIndicator /> */}
+        <ScrollIndicator />
         <Row
           type="flex"
           align="middle"

@@ -16,7 +16,7 @@ function AboutMe({ about }) {
               </h2>
               <p className="about-text about-paragraph">{about}</p>
 
-              <p className="about-text about-paragraph">
+              {/* <p className="about-text about-paragraph">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -24,7 +24,7 @@ function AboutMe({ about }) {
                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              </p> */}
             </div>
           </Col>
           <Col lg={12} sm={24} xs={24}>

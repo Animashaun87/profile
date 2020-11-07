@@ -13,7 +13,7 @@ function Home() {
   });
 
   const info =
-    "Hi, I'm Abidemi Animashaun. I am a software engineer adept at writing functional and scalable code";
+    "Hi, I'm Abidemi Animashaun. I'm a fullstack web developer proficients in HTML, CSS, JavaScript, Reactjs, php, Laravel, and Nodejs. Adept at code writing, performing testing protocols and learning new technologies. Love to work with a team where my work makes a difference.";
 
   return (
     <>
